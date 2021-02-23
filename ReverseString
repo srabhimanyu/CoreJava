@@ -1,0 +1,31 @@
+import java.io.*;
+import java.util.*;
+class ReverseString {
+    
+    static BufferedReader br= new BufferedReader(new InputStreamReader(System.in));
+     
+       public static void main(String args[])throws IOException {
+        String str= br.readLine();
+        
+        StringTokenizer ss = new StringTokenizer(str);
+        
+        ReverseString rs = new ReverseString();
+     
+        rs.rev(str+" ");
+ }
+ 
+        void rev(String str){
+            
+            if(str.length()==0){
+                return ;
+            }
+        
+            rev(str.substring(str.indexOf(' ')+1));
+            System.out.print(str.substring(0,str.indexOf(' '))+" ");
+            
+        }
+         
+         
+     
+    
+}
